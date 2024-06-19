@@ -1,0 +1,38 @@
+
+########################
+## Here is you code reviewed
+########################
+
+# Factorial Function Documentation
+
+## Overview
+
+This script contains a Python function `factorial(n)` that calculates and returns the factorial of a given number `n`. The factorial of a number is the product of all positive integers less than or equal to that number. The function uses a recursive algorithm to achieve this. 
+
+The function is called with a specific number (in this case, 5), and the result is printed out in a formatted string that tells us the factorial of the number.
+
+## Code Breakdown
+
+The function `factorial(n)` begins by checking if `n` equals zero. If true, the function returns 1, since the factorial of 0 is 1. If `n` is not zero, the function calls itself, passing in `n - 1` as the argument, and multiplies `n` by the result of this function call. This recursive loop continues until `n` equals zero.
+
+Here is an example of how the function works with an input of 5:
+
+- factorial(5)
+  - 5 * factorial(4)
+    - 4 * factorial(3)
+      - 3 * factorial(2)
+        - 2 * factorial(1)
+          - 1 * factorial(0)
+            - return 1
+
+The result is calculated as 5 * 4 * 3 * 2 * 1, which equals 120. Thus, the factorial of 5 is 120.
+
+## Error Handling and Improvements
+
+As per the code review, the original code lacks error handling for invalid inputs. Factorial is not defined for negative numbers or non-integer inputs, and the function does not handle these. Furthermore, the recursive nature of the function can lead to a stack overflow error for large inputs. 
+
+An improved version of the function has been proposed in the code review, which includes input validation and replaces recursion with iteration to increase the function's robustness and efficiency. 
+
+## Conclusion
+
+In conclusion, the `factorial(n)` function in this script is a simple and effective solution for calculating factorials of small, positive integer values. However, for a more robust and error-resistant solution, consider implementing the improvements suggested in the code review.
